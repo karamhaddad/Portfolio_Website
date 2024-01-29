@@ -75,23 +75,47 @@ body {
     left: 1rem;
     display: flex;
     gap: 0.5rem;
-  }
-  .traffic-lights .light {
+}
+.traffic-lights .light {
     /* Common styling for all lights */
     height: 12px;
     width: 12px;
     border-radius: 50%;
-  }
-  .light.red {
+}
+.light.red {
     background: #ff605c;
-  }
-  .light.yellow {
+}
+.light.yellow {
     background: #ffbd44;
-  }
-  .light.green {
+}
+.light.green {
     background: #00ca4e;
-  }
+}
 
+/*typewriter effect*/
+@keyframes typing {
+    /*Typing effect from nothing to full width text.*/
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink-caret {
+    /*Blinking cursor effect from transparent to colored.*/
+    from, to { border-color: transparent; } 
+    50% { border-color: #0058DD; }
+}
+.typewriter h1 {
+    /* Styling for typewriter effect */
+    font-weight:normal; /*instead of usual bold for h1*/
+    padding-top:2px;
+    font-family: 'Courier New', Courier, monospace;
+
+    overflow: hidden;
+    white-space: nowrap; /*keeps it on one line*/
+    margin: 0 auto; /*centers it*/
+    letter-spacing: .15em; 
+    animation: typing 3s steps(14, end) forwards, blink-caret 1s step-end infinite;
+    border-right: .1em solid #0058DD; /* The typewriter cursor */
+}
 
 
 
