@@ -1,0 +1,272 @@
+/* Resets margin and padding for all elements */
+* {
+}
+
+
+
+/* Smooth scrolling behavior for the whole page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background: #2d3142;
+    overflow: hidden;
+    text-align: center;
+    z-index: 10; /* Keeps it above everything */
+    position: sticky;
+    top: 0; /* Sticks to the top */
+    height: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.211); /* Soft shadow */
+}
+
+/* Removes default list styles and sets margin and padding for navigation list */
+nav ul {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Removes default bullet points */
+}
+
+/* Styling for navigation list items */
+nav ul li {
+    color:#d8d5db;
+    display: inline-block;
+    padding: 15px;
+    margin:10px;
+    line-height: 1;
+    vertical-align: top;
+}
+
+/* Hover effect for navigation list items */
+nav ul li:hover {
+    color: #b0d7ff;
+    transition: color 0.3s, color 0.3s;
+}
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background-color: #2d3142;
+}
+
+/* Styling for the profile section */
+.about-me{
+    color:#d8d5db;
+    margin-bottom:10px;
+}
+
+.mac-window{
+    background: #1e1e1e;
+    border-radius:8px;
+    padding: 2rem;
+    position:relative;
+    margin: 2rem auto;
+    width: max-content;
+}
+.traffic-lights {
+    /* Styling for the window control buttons */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .traffic-lights .light {
+    /* Common styling for all lights */
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+  .light.red {
+    background: #ff605c;
+  }
+  .light.yellow {
+    background: #ffbd44;
+  }
+  .light.green {
+    background: #00ca4e;
+  }
+
+
+
+
+/* Styling for the Experience section */
+.experience {
+    background-color: #d8d5db;
+    padding: 30px;
+    text-align: center;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.experience-details {
+    background-color: #2d3142;
+    border-radius: 15px;
+    color: #d8d5db;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /*Soft shadow*/
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.experience-details ul {
+    padding: 10px; /* Removes padding */
+}
+
+.experience-details li {
+    text-align: center; /* Aligns text to the left */
+}
+
+
+.company-img {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    align-self: center; /* Center logo in the grid area */
+    justify-self: center; /* Center logo in the grid area */
+}
+
+footer{
+    display: flex;
+    align-items: center;/*aligns stuff vertically*/
+    justify-content: center; /*aligns stuff horziontally*/
+    color: #2d3142;
+    background-color: #d8d5db;
+}
+
+footer p{
+    margin-top: 50px;
+}
+
+.tamu{
+    width:278px;
+    height:auto;
+}
+
+button{
+    background-color:#d8d5db;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 10px;
+    border-style: hidden;
+}
+button:hover{
+    background-color: #b0d7ff;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.webdev-img{
+    width:312px;
+    height:auto;
+}
+
+.skills{
+    text-align: center;
+}
+
+.skills-img{
+    width:250px;
+    height: auto;
+    margin-top:30px;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center; /* Horizontally space around items */
+    align-items: center;
+}
+
+.icon{
+    position: relative;
+}
+
+.material-symbols-outlined, .tech-icon{
+    font-size:75px; /*for text icons*/
+    color: #d8d5db;
+    
+    padding:20px;
+
+    width:75px;  /*for the pic icons*/
+    height:auto;
+    transition: filter 0.5s ease;
+}
+
+.skill-description{
+    padding:5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.313);
+    backdrop-filter: blur(10px);
+
+    position: absolute;
+    left:50%;
+    top:100%;
+    transform: translateX(-50%); 
+    
+    visibility:hidden;
+    opacity: 0; /*this makes the animation of fading in possible*/ 
+    transition: opacity 0.5s ease; /*ease makes it ease back to normal;*/
+}
+
+.icon:hover .skill-description{
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon:hover .material-symbols-outlined, .icon:hover .tech-icon{
+    filter: drop-shadow(0px 5px 15px rgba(255, 255, 255, 0.355));
+}
+
+#skills-header{
+    color: #d8d5db;
+    margin:10px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+.projects{
+    background-color: #d8d5db;
+}
+
+#top-page-exp{
+    font-size: 75px;
+    color:#2d3142;
+    font-family: 'Courier New', monospace;
+}
+
+#top-page-skills{
+    margin-bottom:0px;
+    margin-top:20px;
+    font-size: 75px;
+    color: #d8d5db;
+    font-family: 'Courier New', monospace;
+}
+
+.projects{
+    text-align: center;
+}
+#top-page-projects{
+    margin-bottom:0px;
+    margin-top:20px;
+    font-size: 75px;
+    color: #2d3142;
+    font-family: 'Courier New', monospace;   
+}
+
