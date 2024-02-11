@@ -1,7 +1,6 @@
 /* Resets margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
+
 }
 
 
@@ -132,6 +131,7 @@ body {
     font-weight:normal; /*instead of usual bold for h1*/
     padding-top:2px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5em;
 
     overflow: hidden;
     white-space: nowrap; /*keeps it on one line*/
@@ -145,8 +145,9 @@ body {
 
 /* Styling for the Experience section */
 .experience {
+    position: relative;
     background-color: #d8d5db;
-    padding: 30px;
+    padding: 10px 0;
     
 }
 .experience h1{
@@ -157,8 +158,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    width: 80%;
-    max-width: 1000px;
+    width: 100%; /*this line is used to make the container full width*/
+    max-width: 1000px; /*TODO: check later to make it always full and centered*/
     margin: auto;
     text-align: center;
 
@@ -166,7 +167,7 @@ body {
     overflow-x: auto; /* Allows horizontal scrolling */
     scroll-snap-type: x mandatory; /* Enables snapping */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-    scroll-padding-left: 10vw; /* Adjust if you want some padding on the left */
+    scroll-padding-left: 14vw; /*adjusted to show a little of the prev and next card.*/
 }
 
 .experience-details {
@@ -192,7 +193,7 @@ body {
 
 
 .company-img {
-    width: 100%; /* Adjust as needed */
+    width: 100%;
     height: auto;
     align-self: center; /* Center logo in the grid area */
     justify-self: center; /* Center logo in the grid area */
@@ -208,11 +209,6 @@ footer{
 
 footer p{
     margin-top: 50px;
-}
-
-.tamu{
-    width:278px;
-    height:auto;
 }
 
 /*new glowing button*/
@@ -291,19 +287,8 @@ footer p{
     border-radius: 10px;
   }/*END OF BUTTON HERE =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-.webdev-img{
-    width:312px;
-    height:auto;
-}
-
 .skills{
     text-align: center;
-}
-
-.skills-img{
-    width:250px;
-    height: auto;
-    margin-top:30px;
 }
 
 .skills-container{
@@ -318,49 +303,6 @@ footer p{
     position: relative;
 }
 
-.material-symbols-outlined, .tech-icon{
-    font-size:75px; /*for text icons*/
-    color: #d8d5db;
-    
-    padding:20px;
-
-    width:75px;  /*for the pic icons*/
-    height:auto;
-    transition: filter 0.5s ease;
-}
-
-.skill-description{
-    padding:5px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.313);
-    backdrop-filter: blur(10px);
-
-    position: absolute;
-    left:50%;
-    top:100%;
-    transform: translateX(-50%); 
-    
-    visibility:hidden;
-    opacity: 0; /*this makes the animation of fading in possible*/ 
-    transition: opacity 0.5s ease; /*ease makes it ease back to normal;*/
-}
-
-.icon:hover .skill-description{
-    visibility: visible;
-    opacity: 1;
-}
-
-.icon:hover .material-symbols-outlined, .icon:hover .tech-icon{
-    filter: drop-shadow(0px 5px 15px rgba(255, 255, 255, 0.355));
-}
-
-#skills-header{
-    color: #d8d5db;
-    margin:10px;
-    margin-bottom:0px;
-    padding:0px;
-}
-
 .projects{
     background-color: #d8d5db;
 }
@@ -372,8 +314,6 @@ footer p{
 }
 
 #top-page-skills{
-    margin-bottom:0px;
-    margin-top:20px;
     font-size: 75px;
     color: #d8d5db;
     font-family: 'Courier New', monospace;
@@ -384,7 +324,6 @@ footer p{
 }
 #top-page-projects{
     margin-bottom:0px;
-    margin-top:20px;
     font-size: 75px;
     color: #2d3142;
     font-family: 'Courier New', monospace;   
@@ -396,33 +335,30 @@ footer p{
     overflow: hidden;
 } 
   .experience-container {
-    padding: 0 20vw;
+    padding:10px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    overflow-y: hidden; /* Prevent vertical scrolling */
   }
 
-  .experience-container::-webkit-scrollbar {
-    display: none;
-  }
 
   .experience-card {
     position:relative;
-
-    margin:15px;
-    flex: 0 0 auto;
+    
+    flex: 0 0 auto; /* first two numbers are for flex-grow and flex-shrink, the last one is for flex-basis which helps to set the width of the card */
     width: 250px;
     height: 450px;
     margin-right: 20px;
     padding: 20px; /* Add padding */
-    padding-bottom:30px;
+    padding-bottom:500px;
     background-color: #fff; /*CHANGE LATER Add background color */
     border-radius: 8px; /* Round the corners */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 
     scroll-snap-align: start; /* Snaps the start of the element to the scroll container's snapport */
-    flex: none; /* Don't let the items grow or shrink */
+
 }
   
   .experience-image {
@@ -437,10 +373,12 @@ footer p{
     object-fit: cover; /*this line is used to make the image fit the container*/
   }
 
+  .experience-info{
+    display: flex;
+    flex-direction: column; /*this helps us align everything vertically in a flex*/
+    align-items: center; /*center all items inside*/
+  }
 
-  .experience-info {
-    padding: 10px; /* Add padding */
-}
   .experience-date {
     display: block; /* Ensure these are on new lines */
     margin-bottom: 5px; /* Add a bit of margin below each */
@@ -466,6 +404,8 @@ footer p{
     transform: translateX(-50%);
     margin-bottom:10px;
 
+    font-size:1em;
+
     border: none;
     width: 90%;
     border-radius: 10px;
@@ -479,41 +419,85 @@ footer p{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button on hover */
 }
 
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 2vw; /* Default for smaller screens */
+}
+
+/* Small screens (phones)*/
+@media (max-width: 600px) { /* Adjust the max-width as needed for targeting phone screens */
+  .title-container {
+    align-items: center; /* Centers the content for smaller screens */
+  }
+
+  .btns {
+    justify-content: center; /* Centers the buttons within the .btns container */
+    margin-left: 0; /* Resets the left margin to ensure centering */
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .btns {
+    margin-left: 10vw; /* Adjusted for medium screens */
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .btns {
+    margin-left: 15vw; /*good for larger screens */
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+  .btns {
+    margin-left: 17vw; /* Further increase for extra large screens */
+  }
+}
+/* Extra large screens */
+@media (min-width: 2000px) {
+  .btns {
+    margin-left: 13vw; /* Further increase for extra large screens */
+  }
+}
+@media (min-width: 2560px) {
+  .btns {
+    margin-left: 11vw; /* Further increase for extra large screens */
+  }
+}
+
+.pre-btn, .nxt-btn {
+  margin:5px;/*margin left is 0 and margin right is 5px*/
+  padding:10px;
+  background-color: #ffffff;
+  border-radius: 20%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow, adjust as needed */
+}
+
 .pre-btn{
-  margin-left:10px;
+  transform: rotate(180deg);
 }
-.nxt-btn{
-  margin-right:10px;
-}
-  .pre-btn, .nxt-btn {
-    /*this section is used to style the previous and next buttons*/
-    border: none;
-    width:10px;
-    height:10px;
-    padding:20px;
-    position: absolute;
-    top: 50%; /* Vertically center the buttons */
-    transform: translateY(-50%); /* Adjust the position */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 100%;
-    cursor: pointer;
-    z-index: 8;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  }
-  .pre-btn {
-    /*this section is used to style the previous button*/
-    left: 0;
-    transform: rotate(180deg); /*this line is used to rotate the previous button*/
-  }
-  .nxt-btn {
-    right: 0;
-  }
+
 
 .pre-btn img, .nxt-btn img {
   opacity: 0.2; /*this line is used to make the previous and next buttons less visible*/
+  transition: opacity 0.3s ease-in-out; /* Add a transition to the opacity property */
 }
 
 .pre-btn:hover img, .nxt-btn:hover img {
@@ -521,10 +505,11 @@ footer p{
 }
 
 .collection-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+  /*this section is used to style the collection container*/
+    width: 100%; /*this line is used to make the container full width*/
+    display: grid; /*this line is used to make the container a grid*/
+    grid-template-columns: repeat(2, 1fr); /*this line is used to make the container have 2 columns*/
+    grid-gap: 10px; /* Add a gap between the grid items */
 }
 
 .collection {
@@ -547,7 +532,6 @@ footer p{
     text-align: center;
     color: #fff;
     font-size: 50px;
-    text-transform: capitalize;
   }
 
   .collection:nth-child(3) {
@@ -562,3 +546,10 @@ footer p{
   .description { /* Assuming the class for the description is 'description' */
     margin-top: -10px; /* Add a negative top margin to move it closer to the product-brand */
 }
+
+
+.bg-custom{
+  /*CSS rule for the custom background color TAILWIND*/
+  background-color: #2d3142;
+}
+
