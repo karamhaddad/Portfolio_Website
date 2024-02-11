@@ -447,6 +447,13 @@ footer p{
   .btns {
     display:none; /*no need for the buttons when on the phone*/
   }
+  #nav{
+    display:none;
+  }
+  /*all h1 needs to be smaller on phones*/
+  h1{
+    font-size: 2em;
+  }
 }
 
 /* Medium screens */
