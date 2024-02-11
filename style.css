@@ -452,7 +452,11 @@ footer p{
   }
   /*all h1 needs to be smaller on phones*/
   h1{
-    font-size: 2em;
+    font-size: 50px !important;
+  }
+  .typewriter h1{
+    /*make it important*/
+    font-size: 30px !important;
   }
 }
 
