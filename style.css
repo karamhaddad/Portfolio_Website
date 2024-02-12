@@ -1,6 +1,7 @@
 /* Resets margin and padding for all elements */
 * {
-
+  margin:0px;
+  padding:0px;
 }
 
 
@@ -141,17 +142,12 @@ body {
     border-right: .1em solid #0058DD; /* The typewriter cursor */
 }
 
-
-
 /* Styling for the Experience section */
 .experience {
     position: relative;
     background-color: #d8d5db;
     padding: 10px 0;
     
-}
-.experience h1{
-    text-align: center;
 }
 
 .experience-container {
@@ -211,7 +207,7 @@ footer p{
     margin-top: 50px;
 }
 
-/*new glowing button*/
+/*GLOWING BUTTON =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
 .button-85 {
     padding: 0.6em 2em; /* Increased padding for larger button size */
     font-size: 1em; /* Larger text */
@@ -304,26 +300,27 @@ footer p{
 }
 
 .projects{
-    background-color: #d8d5db;
+  background-color: #d8d5db;
 }
 
 #top-page-exp{
-    font-size: 75px;
-    color:#2d3142;
-    font-family: 'Courier New', monospace;
+  margin-bottom: -30px; /*lower it to get to the carousel*/
+  font-size: 75px;
+  color:#2d3142;
+  font-family: 'Courier New', monospace;
 }
 
 #top-page-skills{
-    font-size: 75px;
-    color: #d8d5db;
-    font-family: 'Courier New', monospace;
+  font-size: 75px;
+  color: #d8d5db;
+  font-family: 'Courier New', monospace;
 }
 
 .projects{
     text-align: center;
 }
 #top-page-projects{
-    margin-bottom:0px;
+    margin-bottom: -30px;
     font-size: 75px;
     color: #2d3142;
     font-family: 'Courier New', monospace;   
@@ -334,16 +331,16 @@ footer p{
     position: relative;
     overflow: hidden;
 } 
-  .experience-container {
+.experience-container {
     padding:10px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     overflow-y: hidden; /* Prevent vertical scrolling */
-  }
+}
 
 
-  .experience-card {
+.experience-card {
     position:relative;
     
     flex: 0 0 auto; /* first two numbers are for flex-grow and flex-shrink, the last one is for flex-basis which helps to set the width of the card */
@@ -361,75 +358,80 @@ footer p{
 
 }
   
-  .experience-image {
-    position: relative; /*this line is used to position the discount tag and the button*/
-    width: 100%;
-    height: 150px;
-    overflow: hidden; /*this line is used to hide the overflowing content*/
-  }
-  .experience-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*this line is used to make the image fit the container*/
-  }
-
-  .experience-info{
-    display: flex;
-    flex-direction: column; /*this helps us align everything vertically in a flex*/
-    align-items: center; /*center all items inside*/
-  }
-
-  .experience-date {
-    display: block; /* Ensure these are on new lines */
-    margin-bottom: 5px; /* Add a bit of margin below each */
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    opacity: 0.5;
-    margin: 5px 0;
-  }
-  .experience-description {
-    display: block; /* Ensure these are on new lines */
-    margin-bottom: 5px; /* Add a bit of margin below each */
-    font-weight: 900;
-    font-size: 20px;
-  }
-
-  .card-btn {
-    /*this section is used to style the button*/
-    position: absolute;
-    bottom: 0;
-    left:50%;
-    transform: translateX(-50%);
-    margin-bottom:10px;
-
-    font-size:1em;
-
-    border: none;
-    width: 90%;
-    border-radius: 10px;
-    height: 40px;
-    background: #2d3142;
-    color: #fff;
-
-    transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
-  }
-  .card-btn:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button on hover */
+.experience-image {
+  position: relative; /*this line is used to position the discount tag and the button*/
+  width: 100%;
+  height: 150px;
+  overflow: hidden; /*this line is used to hide the overflowing content*/
 }
 
-.header-container {
+.experience-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*this line is used to make the image fit the container*/
+}
+
+.experience-info{
+  display: flex;
+  flex-direction: column; /*this helps us align everything vertically in a flex*/
+  align-items: center; /*center all items inside*/
+}
+
+.experience-date {
+  display: block; /* Ensure these are on new lines */
+  margin-bottom: 5px; /* Add a bit of margin below each */
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  margin: 5px 0;
+}
+
+.experience-description {
+  display: block; /* Ensure these are on new lines */
+  margin-bottom: 5px; /* Add a bit of margin below each */
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.card-btn {
+  /*this section is used to style the button*/
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+  margin-bottom:10px;
+
+  font-size:1em;
+
+  border: none;
+  width: 90%;
+  border-radius: 10px;
+  height: 40px;
+  background: #2d3142;
+  color: #fff;
+
+  transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
+}
+.card-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button on hover */
+}
+
+.header-container{
+  margin: 0 auto; /*top and bottom margin 0... left and right are auto, so centers it.*/
+  max-width: 1000px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .title-container {
+  width:100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
 
 .btns {
   display: flex;
@@ -458,37 +460,8 @@ footer p{
     /*make it important*/
     font-size: 30px !important;
   }
-}
-
-/* Medium screens */
-@media (min-width: 768px) {
-  .btns {
-    margin-left: 10vw; /* Adjusted for medium screens */
-  }
-}
-
-/* Large screens */
-@media (min-width: 1024px) {
-  .btns {
-    margin-left: 15vw; /*good for larger screens */
-  }
-}
-
-/* Extra large screens */
-@media (min-width: 1440px) {
-  .btns {
-    margin-left: 17vw; /* Further increase for extra large screens */
-  }
-}
-/* Extra large screens */
-@media (min-width: 2000px) {
-  .btns {
-    margin-left: 13vw; /* Further increase for extra large screens */
-  }
-}
-@media (min-width: 2560px) {
-  .btns {
-    margin-left: 11vw; /* Further increase for extra large screens */
+  #top-page-exp, #top-page-projects{
+    margin: 0 auto; /*top bottom margin is 0. left and right auto, to center it*/
   }
 }
 
@@ -549,12 +522,12 @@ footer p{
     margin-bottom: 10px;
   }
 
-  .experience-brand {
-    font-weight: 900;
-    margin-bottom:10px;
-  }
-  .description { /* Assuming the class for the description is 'description' */
-    margin-top: -10px; /* Add a negative top margin to move it closer to the product-brand */
+.experience-brand {
+  font-weight: 900;
+  margin-bottom:10px;
+}
+.description { /* Assuming the class for the description is 'description' */
+  margin-top: -10px; /* Add a negative top margin to move it closer to the product-brand */
 }
 
 
