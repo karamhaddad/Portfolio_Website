@@ -196,15 +196,10 @@ body {
 }
 
 footer{
-    display: flex;
-    align-items: center;/*aligns stuff vertically*/
-    justify-content: center; /*aligns stuff horziontally*/
-    color: #2d3142;
-    background-color: #d8d5db;
-}
-
-footer p{
-    margin-top: 50px;
+  text-align: center;
+  color: #2d3142;
+  background-color: #d8d5db;
+  padding:15px;
 }
 
 /*GLOWING BUTTON =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
@@ -304,14 +299,15 @@ footer p{
 }
 
 #top-page-exp{
+  z-index:5; /*this is so its above the carousel*/
   margin-bottom: -30px; /*lower it to get to the carousel*/
-  font-size: 75px;
+  font-size: 65px;
   color:#2d3142;
   font-family: 'Courier New', monospace;
 }
 
 #top-page-skills{
-  font-size: 75px;
+  font-size: 65px;
   color: #d8d5db;
   font-family: 'Courier New', monospace;
 }
@@ -319,11 +315,13 @@ footer p{
 .projects{
     text-align: center;
 }
+
 #top-page-projects{
-    margin-bottom: -30px;
-    font-size: 75px;
-    color: #2d3142;
-    font-family: 'Courier New', monospace;   
+  z-index:5; /*this is so its above the carousel*/
+  margin-bottom: -30px;
+  font-size: 65px;
+  color: #2d3142;
+  font-family: 'Courier New', monospace;   
 }
 
 /*STYLING FOR THE CAROUSEL-----------=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -534,3 +532,49 @@ footer p{
   background-color: #2d3142;
 }
 
+
+
+/* Contact Section Styling */
+#contact {
+  background-color: #2d3142; /* Custom background color */
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom:10px;
+}
+
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon i {
+  transition: color 0.3s ease;
+}
+
+.contact-icon span {
+  margin-top: 8px;
+}
+
+/* Hover Effects for Icons */
+.contact-icon:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon:hover i.fa-envelope {
+  color: #dd4b39; /* Email icon hover color */
+}
+
+.contact-icon:hover i.fa-github {
+  color: #6cc644; /* GitHub icon hover color */
+}
+
+.contact-icon:hover i.fa-linkedin {
+  color: #0077b5; /* LinkedIn icon hover color */
+}
+
+.contact-icon:hover i.fa-youtube {
+  color: #b2071d; /* YouTube icon hover color */
+}
