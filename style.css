@@ -14,7 +14,7 @@ html {
 
 /* Styling for the navigation bar DESKTOP============================================================VVVVVV*/
 nav {
-    background: #2d3142;
+    background: #101010;
     overflow: hidden;
     text-align: center;
     z-index: 10; /* Keeps it above everything */
@@ -73,7 +73,7 @@ nav ul li:hover {
   right: -100%; /* Start off the screen */
   height: 100vh;
   width: 250px;
-  background-color: #2d3142;
+  background-color: #101010;
   box-shadow: -2px 0px 5px rgba(0,0,0,0.5);
   transition: right 0.3s ease-out;
   z-index: 15;
@@ -168,7 +168,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
-    background-color: #2d3142;
+    background-color: #000000;
 }
 
 /* Styling for the profile section */
@@ -259,7 +259,7 @@ body {
 /* Styling for the Experience section */
 .experience {
     position: relative;
-    background-color: #d8d5db;
+    background-color: #101010;
     padding: 10px 0;
     
 }
@@ -311,8 +311,8 @@ body {
 
 footer{
   text-align: center;
-  color: #2d3142;
-  background-color: #d8d5db;
+  color: #F5F5F7;
+  background-color: #101010;
   padding:15px;
 }
 
@@ -409,20 +409,20 @@ footer{
 }
 
 .projects{
-  background-color: #d8d5db;
+  background-color: #101010;
 }
 
 #top-page-exp{
   z-index:5; /*this is so its above the carousel*/
   margin-bottom: -30px; /*lower it to get to the carousel*/
   font-size: 65px;
-  color:#2d3142;
+  color:#F5F5F7;
   font-family: 'Courier New', monospace;
 }
 
 #top-page-skills{
   font-size: 65px;
-  color: #d8d5db;
+  color: #F5F5F7;
   font-family: 'Courier New', monospace;
 }
 
@@ -434,7 +434,7 @@ footer{
   z-index:5; /*this is so its above the carousel*/
   margin-bottom: -30px;
   font-size: 65px;
-  color: #2d3142;
+  color: #F5F5F7;
   font-family: 'Courier New', monospace;   
 }
 
@@ -461,7 +461,7 @@ footer{
     margin-right: 20px;
     padding: 20px; /* Add padding */
     padding-bottom:500px;
-    background-color: #fff; /*CHANGE LATER Add background color */
+    background-color: #333335; /*CHANGE LATER Add background color */
     border-radius: 8px; /* Round the corners */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
@@ -484,6 +484,7 @@ footer{
 }
 
 .experience-info{
+  color: #F5F5F7;
   display: flex;
   flex-direction: column; /*this helps us align everything vertically in a flex*/
   align-items: center; /*center all items inside*/
@@ -519,8 +520,8 @@ footer{
   width: 90%;
   border-radius: 10px;
   height: 40px;
-  background: #2d3142;
-  color: #fff;
+  background: #0071E3;
+  color: #F5F5F7;
 
   transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
 }
@@ -575,7 +576,7 @@ footer{
 .pre-btn, .nxt-btn {
   margin:5px;/*margin left is 0 and margin right is 5px*/
   padding:10px;
-  background-color: #ffffff;
+  background-color: #333336;
   border-radius: 20%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow, adjust as needed */
 }
@@ -640,24 +641,24 @@ footer{
 
 .bg-custom{
   /*CSS rule for the custom background color TAILWIND*/
-  background-color: #2d3142;
+  background-color: #000000;
 }
 
 
 
 /* Contact Section Styling */
 #contact {
-  background-color: #2d3142; /* Custom background color */
-  color: #ffffff;
+  margin-bottom:25px;
+  background-color: #000000; /* Custom background color */
+  color: #F5F5F7;
   font-family: 'Courier New', Courier, monospace;
-  margin-bottom:10px;
 }
 
 .contact-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
+  color: #F5F5F7;
   transition: transform 0.3s ease;
 }
 
