@@ -10,6 +10,10 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 65px;
+
+    /*scroll bar design vertical.*/
+    scrollbar-width: thin; /* Can be "auto", "thin", or "none" */
+    scrollbar-color: #555 #333; /* Thumb and track color */
 }
 
 /* Styling for the navigation bar DESKTOP============================================================VVVVVV*/
@@ -278,6 +282,10 @@ body {
     scroll-snap-type: x mandatory; /* Enables snapping */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
     scroll-padding-left: 14vw; /*adjusted to show a little of the prev and next card.*/
+
+    /*styling for the bar itself*/
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #555 #333; /* thumb and track color */
 }
 
 .experience-details {
