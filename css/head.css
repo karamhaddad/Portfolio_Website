@@ -167,13 +167,21 @@
 /*END OF BUTTON HERE =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 /* Small screens (phones)*/
-@media (max-width: 600px) { /* Adjust the max-width as needed for targeting phone screens */
+@media (max-width: 600px) {
   /*all h1 needs to be smaller on phones*/
   h1{
-    font-size: 50px !important;
+    font-size: 2.5em !important;
+  }
+  /*make headshot smaller*/
+  .headshot{
+    width: 160px;
+    height: 160px;
+  }
+  .button-85{
+    font-size: 0.8em !important;
   }
   .typewriter h1{
     /*make it important*/
-    font-size: 30px !important;
+    font-size: 20px !important;
   }
 }

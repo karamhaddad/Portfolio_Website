@@ -6,7 +6,8 @@
 
 /* Styling for the navigation bar DESKTOP============================================================VVVVVV*/
 nav {
-  background: #101010;
+  /*make the background black but also slightly backdrop blur */
+  background-color: rgba(16, 16, 16, 0.96);
   overflow: hidden;
   text-align: center;
   z-index: 10; /* Keeps it above everything */
@@ -55,7 +56,6 @@ nav ul li:hover {
   cursor: pointer;
   font-size: 30px;
   color: #d8d5db;
-  margin-right: 10px;
 }
 
 /* Mobile Menu */
@@ -65,10 +65,11 @@ nav ul li:hover {
   right: -100%; /* Start off the screen */
   height: 100vh;
   width: 250px;
-  background-color: #101010;
-  box-shadow: -2px 0px 5px rgba(0,0,0,0.5);
+  background-color: rgba(16, 16, 16, 0.88);
+  backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+  
   transition: right 0.3s ease-out;
-  z-index: 15;
+  z-index: 19;
   display: flex;
   flex-direction: column;
   padding-top: 45px; /* Adjust based on your nav height */
@@ -114,6 +115,7 @@ nav ul li:hover {
   height: 20px;
   cursor: pointer;
   z-index: 20; /* Ensures the icon is clickable and above other content */
+  margin-right: 10px;
 }
 
 .line {
@@ -137,6 +139,10 @@ nav ul li:hover {
 @media (max-width: 768px) {
   nav{
     padding: 6px; /*makes the mobile nav bar a little bigger*/
+  }
+  .mobile-menu a{
+    /*make font slightly smaller*/
+    font-size: 1.2em;
   }
   .hamburger-icon {
     display: flex;

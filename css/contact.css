@@ -48,3 +48,11 @@
 .contact-icon:hover i.fa-youtube {
   color: #b2071d; /* YouTube icon hover color */
 }
+
+/* Small screens (phones)*/
+@media (max-width: 600px) {
+  /*make the contact icons and text below it smaller*/
+  .contact-icon {
+    font-size: 0.8em;
+  }
+}

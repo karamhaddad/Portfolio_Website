@@ -119,49 +119,49 @@ object-fit: cover; /*this line is used to make the image fit the container*/
 }
 
 .experience-info{
-color: #F5F5F7;
-display: flex;
-flex-direction: column; /*this helps us align everything vertically in a flex*/
-align-items: center; /*center all items inside*/
+  color: #F5F5F7;
+  display: flex;
+  flex-direction: column; /*this helps us align everything vertically in a flex*/
+  align-items: center; /*center all items inside*/
 }
 
 .experience-date {
-display: block; /* Ensure these are on new lines */
-width: 100%;
-height: 20px;
-line-height: 20px;
-overflow: hidden;
-opacity: 0.5;
+  display: block; /* Ensure these are on new lines */
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
 }
 
 .experience-description {
-display: block; /* Ensure these are on new lines */
-margin-bottom: 5px; /* Add a bit of margin below each */
-font-weight: 900;
-font-size: 20px;
+  display: block; /* Ensure these are on new lines */
+  margin-bottom: 5px; /* Add a bit of margin below each */
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .card-btn {
-/*this section is used to style the button*/
-position: absolute;
-bottom: 0;
-left:50%;
-transform: translateX(-50%);
-margin-bottom:10px;
+  /*this section is used to style the button*/
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+  margin-bottom:10px;
 
-font-size:1em;
+  font-size:1em;
 
-border: none;
-width: 90%;
-border-radius: 10px;
-height: 40px;
-background: #0071E3;
-color: #F5F5F7;
+  border: none;
+  width: 90%;
+  border-radius: 10px;
+  height: 40px;
+  background: #0071E3;
+  color: #F5F5F7;
 
-transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
+  transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
 }
 .card-btn:hover {
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button on hover */
 }
 
 .header-container{
@@ -219,15 +219,21 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a black shadow around the button
   .btns {
     display:none; /*no need for the buttons when on the phone*/
   }
-  /*all h1 needs to be smaller on phones*/
-  h1{
-    font-size: 50px !important;
-  }
-  .typewriter h1{
-    /*make it important*/
-    font-size: 30px !important;
-  }
   #top-page-projects{
     margin: 0 auto; /*top bottom margin is 0. left and right auto, to center it*/
+  }
+  /*make experience card smaller*/
+  .experience-card {
+    width: 200px;
+    height: 400px;
+  }
+  /*make experience text*/
+  .experience-info{
+    font-size: 0.9em;
+  }
+  /*make experience button smaller*/
+  .card-btn {
+    height: 30px;
+    font-size: 0.86em;
   }
 }
