@@ -66,7 +66,8 @@ nav ul li:hover {
   height: 100vh;
   width: 250px;
   background-color: rgba(16, 16, 16, 0.88);
-  backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+  -webkit-backdrop-filter: blur(10px); /* Add this line first, it fixes blur for Safari*/
+   backdrop-filter: blur(10px);  /* This line activates blur*/
   
   transition: right 0.3s ease-out;
   z-index: 19;
