@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgb(16, 16, 16)),
   url(../banner.jpeg);
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@
   padding: 2rem;
   padding-top: 2.5rem; /*to make room for the traffic light*/
   position:relative;
-  margin: 2rem auto;
+  margin: 2rem auto 10px auto; /*top, right, bottom, left.*/
   width: max-content;
 }
 .traffic-lights {
@@ -89,82 +89,56 @@
   border-right: .1em solid #0058DD; /* The typewriter cursor */
 }
 
-/*GLOWING BUTTON =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
-.button-85 {
-  padding: 0.6em 2em; /* Increased padding for larger button size */
-  font-size: 1em; /* Larger text */
-  margin-bottom: 20px;
+/* BUTTON CSS RESUME */
 
+.text{
+  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+  font-color: #F5F5F7;
+}
 
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
+.button-64 {
+  margin-bottom: 35px;
+  margin-top:10px;
+
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(152, 65, 252, 1) 0 9px 35px -13px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  line-height: 1em;
+  z-index: 100;
+  padding: 3px; /*outline outside the button*/
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.button-85:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: filter 0.4s ease-in-out;
-  
-  border-radius: 10px;
-}
-.button-85:hover:before {
-  filter: blur(12px); /* Increased blur for bigger glow */
+.button-64:active,
+.button-64:hover {
+  outline: 0;
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
+.button-64 span {
+  background-color: #1e1e1e;
+  border-radius: 6px;
   height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+  transition: 300ms;
+  padding:10px;
 }
-/*END OF BUTTON HERE =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.button-64:hover span {
+  background: none;
+}
+/*make the button-64 itself smaller not the text inside it*/
+
+/*END OF BUTTON CSS*/
 
 /* Small screens (phones)*/
 @media (max-width: 600px) {
@@ -182,6 +156,6 @@
   }
   .typewriter h1{
     /*make it important*/
-    font-size: 20px !important;
+    font-size: 30px !important;
   }
 }
