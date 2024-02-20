@@ -1,0 +1,115 @@
+/* Custom styles replacing Tailwind utility classes */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #101010;
+  color: #F5F5F7; /* Moved color here for broader application */
+}
+.projects-section {
+  padding: 3rem 1rem;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.top-page-title{
+  font-size: 5rem;
+  font-weight: normal;
+  color: #F5F5F7;
+  animation: glow 5s infinite alternate;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+.project-card {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+@media (min-width: 640px) {
+  .project-card {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .project-card {
+    width: 50%;
+  }
+}
+.card-content {
+  background-color: #333335;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-image {
+  width:100%;
+  height: 300px;
+  object-fit: cover;
+  /*now center the image*/
+  margin: auto;
+  display: block;
+}
+.card-text {
+  padding: 1.5rem;
+}
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #F5F5F7;
+}
+.card-description {
+  color: #b3b3b3; /* Adjusted for better contrast */
+  margin-bottom: 1rem;
+}
+.skills {
+  margin-bottom: 1rem;
+}
+.skill {
+  display: inline-block;
+  background-color: #1D4ED8; /* Tailwind Blue 600 */
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem; /* Tailwind text-sm */
+  font-weight: 600; /* Tailwind font-semibold */
+  color: #E2E8F0; /* Tailwind text-gray-200 */
+  margin-right: 0.5rem;
+}
+
+/* Add this at the end of your CSS file */
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px #9b59b6, /* Light Purple */
+      0 0 20px #8e44ad, /* Darker Purple */
+      0 0 30px #3498db, /* Light Blue */
+      0 0 40px #2980b9, /* Darker Blue */
+      0 0 50px #e056fd, /* Light Pink */
+      0 0 60px #be2edd; /* Darker Pink */
+    color: #f8e9fc; /* Soft pinkish white for the text color */
+  }
+  50% {
+    text-shadow: 
+      0 0 15px #9b59b6, /* Light Purple */
+      0 0 30px #8e44ad, /* Darker Purple */
+      0 0 45px #3498db, /* Light Blue */
+      0 0 60px #2980b9, /* Darker Blue */
+      0 0 75px #e056fd, /* Light Pink */
+      0 0 90px #be2edd; /* Darker Pink */
+    color: #fcdcff; /* Brighter pinkish white for the text color */
+  }
+}
+
+@media (max-width: 600px) {
+    /*make footer text smaller*/
+    h1{
+      font-size: 3.8em !important;
+    }
+}

@@ -85,7 +85,7 @@
   white-space: nowrap; /*keeps it on one line*/
   margin: 0 auto; /*centers it*/
   letter-spacing: .15em; 
-  animation: typing 3s steps(12, end) forwards, blink-caret 1s step-end infinite;
+  animation: typing 3s steps(10, end) forwards, blink-caret 1s step-end infinite;
   border-right: .1em solid #0058DD; /* The typewriter cursor */
 }
 

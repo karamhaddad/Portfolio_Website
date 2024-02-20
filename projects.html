@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Karam Haddad</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" href="seprate-exp.css"> <!-- Link to the external CSS file -->
+
+  <link rel="icon" type="image/x-icon" href="header/kh_logo.png">
+  
+</head>
+
+<body>
+  <nav id="nav">
+      <!-- Hamburger Menu Icon for Mobile -->
+    <div class="hamburger-icon"> 
+        <a href="#home">
+            <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+        </a>
+        <!-- Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()"> <!--calls toggle menu in js when clicked.-->
+            <span class="line line1"></span> <!-- Top line of = that will become part of X -->
+            <span class="line line2"></span> <!-- Bottom line of = that will become part of X -->
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- Desktop nav menu-->
+    <ul class="desktop-menu">
+        <a href="index.html#home"><li> <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"> </li></a>
+        <a href="index.html#home"><li>Home</li></a>
+        <a href="index.html#experience"><li>Experience</li></a>
+        <a href="index.html#projects"><li>Projects</li></a>
+        <a href="index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+  <!-- Project Section -->
+  <section class="projects-section">
+    <div class="container">
+      <header class="section-header">
+        <h1 class="top-page-title">Projects<br>coming soon</h1>
+      </header>
+      <div class="projects-grid">
+        <!-- Project Template -->
+        <!--PROJECT1-->
+        <div class="project-card" id="exxon">
+          <div class="card-content">
+            <img class="card-image" src="experience/exxonmobil.png" alt="Project Thumbnail" />
+            <div class="card-text">
+              <h2 class="card-title">Instrument Engineer Intern</h2>
+              <p class="card-description">Managed and completed major projects including wireless
+                networks, PLC programming, TTL power supplies, and communication protocolors (HART and MODBUS).<br><br>
+              Leveraged strong communication skills to drive project advancement and effectively collaborate on research.<br><br>
+            Applied Electrical and Computer Engineering background to grasp new and unfamiliar concepts.</p>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <!-- Add more skills as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other projects -->
+        <!--PROJECT2-->
+        <div class="project-card" id="webdev">
+          <div class="card-content">
+            <img class="card-image" src="experience/webdev.png" alt="Project Thumbnail" />
+            <div class="card-text">
+              <h2 class="card-title">Web Designer</h2>
+              <p class="card-description">
+                Designed and developed a website for a local business using HTML, CSS, and JavaScript.<br><br>
+                Collaborated with the business owner to understand their needs and vision for the website.<br><br>
+                Delivered a responsive and user-friendly website that met the client's expectations and needs.<br><br>
+                Examples...
+              </p>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <!-- Add more skills as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PROJECT3-->
+        <div class="project-card" id="tamuelen">
+          <div class="card-content">
+            <img class="card-image" src="experience/tamu.png" alt="Project Thumbnail" />
+            <div class="card-text">
+              <h2 class="card-title">Bachelor of Science in Electrical Engineering at Texas A&M University</h2>
+              <p class="card-description">
+                Graduated with a 3.53 GPA<br><br>
+                Relevant coursework:
+              </p>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <!-- Add more skills as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PROJECT4-->
+        <div class="project-card" id="tamucs">
+          <div class="card-content">
+            <img class="card-image" src="experience/tamu.png" alt="Project Thumbnail" />
+            <div class="card-text">
+              <h2 class="card-title">Minor in Computer Science at Texas A&M University</h2>
+              <p class="card-description">
+                Graduated with a 4.0 GPA<br><br>
+                Relevant coursework:
+              </p>
+              <div class="skills">
+                <span class="skill">HTML</span>
+                <!-- Add more skills as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ... rest of your HTML ... -->
+  <script src="script.js"></script> <!-- Link to the nav -->
+</body>
+</html>
