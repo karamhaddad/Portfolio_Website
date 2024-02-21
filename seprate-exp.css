@@ -99,19 +99,21 @@ body {
   }
 }
 
+/* Responsive adjustments */
 @media (max-width: 600px) {
-    /*make footer text smaller*/
-    h1{
-      font-size: 3.8em !important;
-    }
-}
-@media (min-width: 640px) {
-  .project-card {
-    width: 50%;
+  h1 {
+    font-size: 3.8em !important;
   }
 }
+
+@media (min-width: 768px) {
+  .project-card {
+    width: 50%; /* 2 cards per row for medium screens */
+  }
+}
+
 @media (min-width: 1024px) {
   .project-card {
-    width: 50%;
+    width: 33.333%; /* 3 cards per row for larger screens */
   }
 }
