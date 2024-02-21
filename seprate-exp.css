@@ -31,29 +31,21 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
-@media (min-width: 640px) {
-  .project-card {
-    width: 50%;
-  }
-}
-@media (min-width: 1024px) {
-  .project-card {
-    width: 50%;
-  }
-}
 .card-content {
   background-color: #333335;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem; /* Ensure there's padding around the content */
 }
 .card-image {
-  width:100%;
+  width: calc(100% - 2rem); /* Adjust width to be less than 100% */
   height: 300px;
   object-fit: cover;
   /*now center the image*/
-  margin: auto;
+  margin: 1rem;
   display: block;
+  border-radius: 0.5rem;
 }
 .card-text {
   padding: 1.5rem;
@@ -112,4 +104,14 @@ body {
     h1{
       font-size: 3.8em !important;
     }
+}
+@media (min-width: 640px) {
+  .project-card {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .project-card {
+    width: 50%;
+  }
 }
