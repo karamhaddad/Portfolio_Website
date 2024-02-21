@@ -75,7 +75,6 @@ body {
 }
 
 /* Add this at the end of your CSS file */
-
 @keyframes glow {
   0%, 100% {
     text-shadow: 
@@ -101,8 +100,30 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 3.8em !important;
+  /*make things smaller, less crammed, and easier to read*/
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-description {
+    font-size: 1rem;
+  }
+  .skill {
+    font-size: 0.75rem;
+  }
+  .card-text {
+    padding: 1rem;
+  }
+  .card-image {
+    height: 200px;
+  }
+  .top-page-title{
+    font-size: 3.8rem;
+  }
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+  .projects-section {
+    padding: 2rem 2rem;
   }
 }
 
