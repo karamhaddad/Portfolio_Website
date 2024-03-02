@@ -71,6 +71,7 @@
 .experience-brand {
   font-weight: 900;
   margin: 5px auto;
+  text-align: left;
 }
 
 /*STYLING FOR THE CAROUSEL-----------=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -92,10 +93,10 @@
   
   flex: 0 0 auto; /* first two numbers are for flex-grow and flex-shrink, the last one is for flex-basis which helps to set the width of the card */
   width: 250px;
-  height: 450px;
+  height: 500px;
   margin-right: 20px;
   padding: 20px; /* Add padding */
-  padding-bottom:500px;
+  padding-bottom:500;
   background-color: #333335; /*CHANGE LATER Add background color */
   border-radius: 8px; /* Round the corners */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a shadow */
@@ -123,6 +124,8 @@ object-fit: cover; /*this line is used to make the image fit the container*/
   display: flex;
   flex-direction: column; /*this helps us align everything vertically in a flex*/
   align-items: center; /*center all items inside*/
+
+  font-size: 1.1em;
 }
 
 .experience-date {
@@ -132,13 +135,14 @@ object-fit: cover; /*this line is used to make the image fit the container*/
   line-height: 20px;
   overflow: hidden;
   opacity: 0.5;
+  margin-top: 5px;
 }
 
 .experience-description {
   display: block; /* Ensure these are on new lines */
-  margin-bottom: 5px; /* Add a bit of margin below each */
+  margin-bottom: 10px; /* Add a bit of margin below each */
   font-weight: 900;
-  font-size: 20px;
+  font-weight:normal;
 }
 
 .card-btn {
@@ -225,7 +229,8 @@ object-fit: cover; /*this line is used to make the image fit the container*/
   /*make experience card smaller*/
   .experience-card {
     width: 200px;
-    height: 400px;
+    height: 450px;
+    padding-bottom:450px;
   }
   /*make experience text*/
   .experience-info{
