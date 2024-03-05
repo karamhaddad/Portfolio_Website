@@ -70,7 +70,8 @@
 
 .experience-brand {
   font-weight: 900;
-  margin: 5px auto;
+  /*make margin top -5, bottom 0, left and right auto, so it centers it*/
+  margin: -2px auto 6px auto;
   text-align: left;
 }
 
