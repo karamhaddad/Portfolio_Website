@@ -183,7 +183,6 @@ object-fit: cover; /*this line is used to make the image fit the container*/
   align-items: flex-end;
 }
 
-
 .btns {
   display: flex;
   justify-content: flex-end;
