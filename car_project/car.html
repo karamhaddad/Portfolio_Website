@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Avoiding Smart Bot - Karam Haddad</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/nav.css">
+  <link rel="stylesheet" href="../seprate-exp.css"> <!-- Link to the external CSS file -->
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .project-image {
+      max-width: 40%;
+      height: auto;
+    }
+    .steps-image{
+      max-width: 100%;
+      height: auto;
+    }
+    .project-description {
+      max-width: 800px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .skill {
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+    .skill:hover {
+      background-color: #ddd;
+    }
+    @media (max-width: 768px) {
+      .project-description {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="nav">
+    <!-- Hamburger Menu Icon for Mobile -->
+    <div class="hamburger-icon">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <!-- Menu Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <!-- Desktop nav menu-->
+    <ul class="desktop-menu">
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li>Home</li></a>
+      <a href="../index.html#experience"><li>Experience</li></a>
+      <a href="../index.html#projects"><li>Projects</li></a>
+      <a href="../index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <!-- Project Section -->
+  <section class="projects-section">
+    <div class="project-container">
+      <header class="section-header">
+        <h1 class="top-page-title">Object Avoiding Smart Bot</h1>
+      </header>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DBFbXrDwuZE?si=uPZJULHoCyj1GDKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <div class="project-description">
+        <p>
+          Welcome to my latest project, the Object Avoiding Smart Bot! This robot car uses a Raspberry Pi Pico W to navigate around obstacles. Let’s dive into the main parts, tools used, assembly, programming, main logic, adjustments, testing, and future plans.
+        <h2>Main Parts</h2>
+        <!--add image here-->
+        <img class="steps-image" src="../car_project/main_parts.png" alt="Main Parts" />
+        <ul>
+          <li><strong>Power Supply:</strong> I used a variable and portable DC power supply. MEGO Power Supply.</li>
+          <li><strong>Motor Driver:</strong> Controls the direction and speed of the DC motors.</li>
+          <li><strong>DC Motors:</strong> 2 DC motors with the tires mounted on them.</li>
+          <li><strong>Servo Motors:</strong> Mounted with an ultrasonic sensor on top to measure distances in different directions.</li>
+          <li><strong>Raspberry Pi Pico W:</strong> The brains of this robot car.</li>
+          <li><strong>Tires:</strong> Mounted on the chassis.</li>
+        </ul>
+
+        <br>
+        <h2>Tools Used</h2>
+        <!--add image here-->
+        <img class="steps-image" src="../car_project/tools.png" alt="Main Parts" />
+        <ul>
+          <li><strong>3D Printer:</strong> To print the chassis.</li>
+          <li><strong>Soldering Iron:</strong> For making connections.</li>
+          <li><strong>Hot Glue Gun:</strong> To attach components to the chassis.</li>
+          <li><strong>Breadboard and Jumper Wires:</strong> For connecting all the parts.</li>
+        </ul>
+
+        <br>
+        <h2>Assembly</h2>
+        <p>
+          1. <strong>Soldering:</strong> Start by soldering the power and ground wires to the DC motors. The terminal connections can be adjusted later.<br>
+          <img class="steps-image" src="../car_project/solder.png" alt="Main Parts" />
+          <br><br>
+          2. <strong>Hooking Up:</strong> Connect everything to the motor driver. Test an algorithm to ensure the motors run correctly.<br>
+          <img class="steps-image" src="../car_project/motor_d_test.png" alt="Main Parts" />
+          <br><br>
+          3. <strong>Adding the Sensor:</strong> Attach the ultrasonic sensor to measure distances and stop the motors when obstacles are detected.<br>
+          <img class="steps-image" src="../car_project/sensor.png" alt="Main Parts" />
+          <br><br>
+          4. <strong>3D Printing:</strong> Print the chassis and start moving all parts onto it.<br>
+          5. <strong>Connecting Components:</strong> Run wires to the motor driver through the chassis hole. Test connections using the mega power supply and alligator clips.<br>
+          6. <strong>Breadboard Setup:</strong> Move wire connections to a smaller breadboard for easier handling.<br>
+          <img class="steps-image" src="../car_project/chassis.png" alt="Main Parts" />
+          <br><br>
+          7. <strong>Final Touches:</strong> Glue on the rear swivel tire and attach the servo motor. Connect the servo motor to the Raspberry Pi with jumper wires.
+          <img class="steps-image" src="../car_project/servo.png" alt="Main Parts" />
+        </p>
+
+        <br><br>
+        <h2>Programming</h2>
+        <p>
+          I opted for a modular design, where each hardware component has its own Python file:
+        </p>
+        <ul>
+          <li>DC Motors</li>
+          <li>Servo Motor</li>
+          <li>Ultrasonic Sensor</li>
+        </ul>
+        <p>
+          These files handle the declaration, setup, and operation functions for each component. The main logic resides in <code>main.py</code>.
+        </p>
+        <br>
+        <h2>Main Logic</h2>
+        <p>
+          1. <strong>Imports:</strong> Import libraries from the component files.<br>
+          2. <strong>Initialization:</strong> Initialize components.<br>
+          <img class="steps-image" src="../car_project/first_code.png" alt="Main Parts" />
+          <br><br>
+          3. <strong>Scan Directions Function:</strong> Measure distances straight ahead, left, and right, then save these values.<br>
+          <img class="steps-image" src="../car_project/second_code.png" alt="Main Parts" />
+          <br><br>
+          4. <strong>Decision Making:</strong> Compare measurements. Prioritize going straight if the path is clear; otherwise, choose the optimal direction (left or right).<br>
+          <img class="steps-image" src="../car_project/third_code.png" alt="Main Parts" />
+          <br><br>
+          5. <strong>Navigate Loop:</strong> Continuously measure forward distance. If below threshold, use the optimal direction function to navigate.
+          <img class="steps-image" src="../car_project/fourth_code.png" alt="Main Parts" />
+
+          To look at the full detailed code, the Github link is at the end of this post!
+        </p>
+        <br><br>
+
+        <h2>Testing and Future Plans</h2>
+        <p>
+          Testing the robot in my bedroom with obstacles, it navigated correctly, prioritizing forward movement. Future plans include adding the ability to control the car via a phone using the Raspberry Pi Pico W’s Wi-Fi capabilities.
+        </p>
+
+        <!-- Placeholder for Testing Image -->
+        <img class="steps-image" src="../car_project/test.gif" alt="Testing" />
+        <div class="skills">
+          <a href="https://youtu.be/DBFbXrDwuZE" target="_blank" rel="noopener noreferrer">
+            <span class="skill">Youtube Video</span>
+          </a>
+        </div>
+        <div class="skills">
+          <a href="https://github.com/karamhaddad/ObjectAvoidingCar.git" target="_blank" rel="noopener noreferrer">
+            <span class="skill">Project's Github</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script> <!-- Link to the nav -->
+</body>
+</html>
