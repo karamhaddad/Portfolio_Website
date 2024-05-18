@@ -6,9 +6,12 @@
   <title>Object Avoiding Smart Bot - Karam Haddad</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/nav.css">
   <link rel="stylesheet" href="../seprate-exp.css"> <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css"> <!-- Link to the scroll progress CSS file -->
+  
   <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
 
   <style>
@@ -55,15 +58,19 @@
     .skill:hover {
       background-color: #ddd;
     }
+    iframe{
+      box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+      margin-bottom: 15px;
+    }
     @media (max-width: 768px) {
+      .top-page-title{
+        font-size: 2em;
+      }
       h2{
         font-size: 2em;
       }
-      .project-description {
-        padding: 10px;
-      }
       iframe {
-        width: 80%;
+        width: 115%;
         height: auto;
         aspect-ratio: 16/9;
       }
@@ -72,6 +79,12 @@
 </head>
 
 <body>
+  <!--this is a progress bar for scrolling-->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+  
+  <!-- Navigation -->
   <nav id="nav">
     <!-- Hamburger Menu Icon for Mobile -->
     <div class="hamburger-icon">
@@ -212,6 +225,7 @@
       </div>
     </div>
   </section>
-  <script src="script.js"></script> <!-- Link to the nav -->
+  <script src="../script.js"></script> <!-- Link to the nav -->
+  <script src="../scroll_progress/scroll_progress.js"></script> <!-- Link to the scroll progress JS file -->
 </body>
 </html>
