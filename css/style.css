@@ -51,6 +51,14 @@ footer{
   background-color: #101010;
   padding:15px;
 }
+
+.footer-logo{
+  width: 40px;
+  margin:auto;
+  padding-bottom:10px; 
+}
+
+/* Small screens (phones)*/
 @media screen and (max-width: 600px) {
   /*make footer text smaller*/
   footer{
