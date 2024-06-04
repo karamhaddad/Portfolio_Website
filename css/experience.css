@@ -161,13 +161,13 @@ object-fit: contain; /*this line is used to make the image fit the container*/
   width: 90%;
   border-radius: 10px;
   height: 40px;
-  background: #a300e3;
+  background: #1c1c1c;
   color: #F5F5F7;
 
   transition: box-shadow 0.3s ease-in-out; /* Add transition to the box-shadow property */
 }
 .card-btn:hover {
-  background: #b14ed9;
+  background: #525252;
 }
 
 .header-container{
