@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimodal Digit Classification - Karam Haddad</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../seprate-exp.css">
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css">
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    h2 {
+      font-size: 2.5em;
+    }
+    ul {
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .steps-image {
+      max-width: 100%;
+      height: auto;
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .figure-text{
+      display: block;
+      text-align: center;
+    }
+    .project-description {
+      max-width: 800px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .skill {
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+    .skill:hover {
+      background-color: #ddd;
+    }
+    @media (max-width: 768px) {
+      .top-page-title {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      iframe {
+        width: 115%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <!-- Hamburger Menu Icon for Mobile -->
+    <div class="hamburger-icon">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <!-- Menu Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <!-- Desktop nav menu -->
+    <ul class="desktop-menu">
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li>Home</li></a>
+      <a href="../index.html#experience"><li>Experience</li></a>
+      <a href="../index.html#projects"><li>Projects</li></a>
+      <a href="../index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <!-- Project Section -->
+  <section class="projects-section">
+    <div class="project-container">
+      <header class="section-header">
+        <h1 class="top-page-title">Multimodal Digit Classification</h1>
+      </header>
+      <img src="data_type.png" alt="Type of Data Used Sample" class="steps-image">
+
+      <div class="project-description">
+        <p>
+          In this project, I explored a novel approach to classify handwritten digits by combining image and audio data. I expanded the traditional MNIST dataset with spoken audio recordings of the digits, creating a rich dataset that allows for multimodal learning. Using a combination of Convolutional Neural Networks (CNN) and Multilayer Perceptrons (MLP) implemented in PyTorch, my model learned to make predictions from both visual and auditory inputs.
+        </p>
+        
+        <h2>Introduction</h2>
+        <p>
+          Handwritten digit recognition is a critical task in various industries such as banking, postal services, healthcare, and document analysis. While significant advancements have been made in the visual recognition of digits, adding audio data can enhance the prediction accuracy by providing additional context. In this project, I combined both images and audio to improve the recognition accuracy.
+        </p>
+        
+        <h2>Method</h2>
+        <p>
+          To achieve this, I processed the MNIST dataset along with corresponding spoken digit recordings. The image data was normalized, and the audio data was prepared for input into the model. I then split the dataset into training and validation sets to ensure robust model evaluation.
+        </p>
+        
+        <h3>Data Preprocessing</h3>
+        <p>
+          The image data underwent min-max normalization to ensure consistency and aid in convergence during model training. The audio data was directly cast to a float32 format suitable for PyTorch.
+        </p>
+        
+        <h3>Model Design</h3>
+        <ul>
+          <li><strong>Image Model:</strong> A CNN with 3 convolutional layers followed by 2 fully connected layers, using ReLU activation and max pooling.</li>
+          <li><strong>Audio Model:</strong> A 3-layer MLP with ReLU activation to handle the audio input.</li>
+          <li><strong>Combined Model:</strong> Outputs from the image and audio models were concatenated and fed into 2 additional fully connected layers, producing a 10-dimensional vector representing class probabilities.</li>
+        </ul>
+        
+        <h3>Model Training</h3>
+        <p>
+          I trained the model for 10 epochs using cross-entropy loss and the Adam optimizer with a learning rate of 0.001. Training was conducted on a GPU to leverage faster computation. The best validation accuracy was tracked to save the optimal model weights.
+        </p>
+        
+        <h3>Hyperparameter Tuning</h3>
+        <p>
+          No extensive hyperparameter tuning was performed, as the initial settings provided satisfactory results.
+        </p>
+        
+        <h2>Results</h2>
+        <p>
+          The combined multimodal model achieved an impressive accuracy of 99.18% on the test set. This highlights the effectiveness of integrating audio data into the digit recognition task. The following figures illustrate the clustering of the image and audio data.
+        </p>
+        
+        <h3>Clustering Visualizations</h3>
+        <p>
+          <img src="1.png" alt="Image Clustering" class="steps-image">
+          <span class="figure-text"><br><strong>Figure 1:</strong> Image data clustering shows distinct clusters for each digit class.</span>
+        </p>
+        <p>
+          <img src="2.png" alt="Audio Clustering" class="steps-image">
+          <span class="figure-text"><br><strong>Figure 2:</strong> Audio data clustering displays some overlap, indicating challenges in learning distinctive audio features.</span>
+        </p>
+        
+        <h2>Conclusion</h2>
+        <p>
+          My multimodal CNN and MLP model demonstrates the advantages of combining visual and audio data for handwritten digit recognition. Despite achieving high accuracy, the audio model's clustering revealed room for improvement, likely due to variances in audio data such as different accents and noise. Future work could focus on refining the audio processing pipeline to enhance performance further.
+        </p>
+        
+        <h2>Source Code</h2>
+        <div class="skills">
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">
+            <span class="skill">Project's Github</span>
+          </a>
+        </div>
+        
+        <h2>Contact Me</h2>
+        <div class="skills">
+          <a href="../index.html#contact">
+            <span class="skill">Contact Page</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../script.js"></script> <!-- Link to the nav -->
+  <script src="../scroll_progress/scroll_progress.js"></script> <!-- Link to the scroll progress JS file -->
+</body>
+</html>
