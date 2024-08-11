@@ -1,20 +1,4 @@
 /* Custom styles replacing Tailwind utility classes */
-.banner{
-  margin: 0;
-  padding: 200px 0px 200px;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgb(16, 16, 16)),
-  url(exxon_banner.JPG);
-  background-size: cover;
-  background-position: center;
-
-  color:#d8d5db;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #101010;
@@ -35,7 +19,6 @@ body {
   font-size: 5rem;
   font-weight: normal;
   color: #F5F5F7;
-  animation: glow 5s infinite alternate;
 }
 .projects-grid {
   display: flex;
@@ -110,30 +93,6 @@ body {
   font-weight: 600; /* Tailwind font-semibold */
   color: #E2E8F0; /* Tailwind text-gray-200 */
   margin-right: 0.5rem;
-}
-
-/* Add this at the end of your CSS file */
-@keyframes glow {
-  0%, 100% {
-    text-shadow: 
-      0 0 10px #9b59b6, /* Light Purple */
-      0 0 20px #8e44ad, /* Darker Purple */
-      0 0 30px #3498db, /* Light Blue */
-      0 0 40px #2980b9, /* Darker Blue */
-      0 0 50px #e056fd, /* Light Pink */
-      0 0 60px #be2edd; /* Darker Pink */
-    color: #f8e9fc; /* Soft pinkish white for the text color */
-  }
-  50% {
-    text-shadow: 
-      0 0 15px #9b59b6, /* Light Purple */
-      0 0 30px #8e44ad, /* Darker Purple */
-      0 0 45px #3498db, /* Light Blue */
-      0 0 60px #2980b9, /* Darker Blue */
-      0 0 75px #e056fd, /* Light Pink */
-      0 0 90px #be2edd; /* Darker Pink */
-    color: #fcdcff; /* Brighter pinkish white for the text color */
-  }
 }
 
 /* Responsive adjustments */
