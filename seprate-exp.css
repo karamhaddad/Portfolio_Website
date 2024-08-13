@@ -59,39 +59,37 @@ body {
   color: #b3b3b3; /* Adjusted for better contrast */
   margin-bottom: 1rem;
 }
+
 .skills {
-  margin-bottom: 1rem;  
-}
-/*add hover to skills*/
-.skills:hover{
-  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-start; /* Changed from center to flex-start */
 }
 
 .skill {
-  display: inline-block;
-  background-color: #1D4ED8; /* Tailwind Blue 600 */
-  border-radius: 9999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem; /* Tailwind text-sm */
-  font-weight: 600; /* Tailwind font-semibold */
-  color: #E2E8F0; /* Tailwind text-gray-200 */
-  margin-right: 0.5rem;
-  transition: background-color 0.3s ease-in-out; /* Add transition property */
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .skill:hover {
-  background-color: #2563EB; /* New background color on hover */
+  background-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.skill {
-  display: inline-block;
-  background-color: #1D4ED8; /* Tailwind Blue 600 */
-  border-radius: 9999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem; /* Tailwind text-sm */
-  font-weight: 600; /* Tailwind font-semibold */
-  color: #E2E8F0; /* Tailwind text-gray-200 */
-  margin-right: 0.5rem;
+.skill i {
+  margin-right: 8px;
+  font-size: 1.2em;
 }
 
 /* Responsive adjustments */
