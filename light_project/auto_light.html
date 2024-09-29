@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Avoiding Smart Bot - Karam Haddad</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/nav.css">
+  <link rel="stylesheet" href="../seprate-exp.css"> <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css"> <!-- Link to the scroll progress CSS file -->
+  
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    h2{
+      font-size: 2.5em;
+    }
+    ul {
+      padding-left: 25px; /* Adjust to your preference */
+    }
+    li{
+      margin-bottom: 10px; /* Adds space between list items */
+    }
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .steps-image {
+      max-width: 100%;
+      height: auto;
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+      margin: 5px auto 15px auto; /* Updated to center the image */
+      display: block; /* Ensures the image behaves like a block-level element */
+    }
+    .rotated-image {
+      transform: rotate(-90deg); /* Rotates the image by 90 degrees */
+    }
+
+    .project-description {
+      max-width: 800px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .skill {
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+    .skill:hover {
+      background-color: #ddd;
+    }
+    iframe{
+      box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 768px) {
+      .top-page-title{
+        font-size: 2em;
+      }
+      h2{
+        font-size: 2em;
+      }
+      iframe {
+        width: 115%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--this is a progress bar for scrolling-->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <!-- Hamburger Menu Icon for Mobile -->
+    <div class="hamburger-icon">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <!-- Menu Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <!-- Desktop nav menu-->
+    <ul class="desktop-menu">
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li>Home</li></a>
+      <a href="../index.html#experience"><li>Experience</li></a>
+      <a href="../index.html#projects"><li>Projects</li></a>
+      <a href="../index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <section class="projects-section">
+    <div class="project-container">
+      <header class="section-header">
+        <h1 class="top-page-title">Automatic Lighting System</h1>
+        <p>December 2023</p>
+      </header>
+
+      <div class="project-description">
+        <h2>Learning About Op-Amp Comparators</h2>
+        <p>
+          Before diving into the project, let's understand the core component: the op-amp comparator.
+          <br>I have made this simple graphic to describe the way an op-amp comparator works.
+        </p>
+        <img src="comparator.png" alt="Op-Amp Comparator" class="steps-image">
+        <p>
+          In this project, I have used Texas Instruments' (TI) LM358P op-amp. The cool thing about this comparator is that it is a single power supply op-amp, where in my case, I the input was 5V.
+          <br>This means in a "True" state, the op-amp outputs 5V, and in a "False" state, it outputs 0V.
+          <br>Much easier to work with!
+        </p>
+
+        <br>
+        <h2>Project Overview</h2>
+        <p>
+          The automatic lighting system uses a comparator circuit to control a high-wattage lamp based on ambient light and motion detection. Here's a breakdown of the key components and their functions:
+        </p>
+        <br>
+
+        <h3>Components Used</h3>
+        <ul>
+          <li><strong>Power Supply:</strong> 5V for the control circuit</li>
+          <li><strong>TI LM358P Op-Amp:</strong> Chosen for its single power supply capability and low power consumption</li>
+          <li><strong>Light Dependent Resistor (LDR):</strong> Detects ambient light levels. Where when light source is high, resistance is low. This is useful to vary our voltage inputs through a voltage divider later</li>
+          <li><strong>Potentiometer:</strong> Allows for adjustable light sensitivity when set up in a voltage divider manner</li>
+          <li><strong>PIR Sensor:</strong> Detects motion in the area, outputs HIGH when motion is detected</li>
+          <li><strong>2 NPN Transistors (2N2222):</strong> Used to create an AND gate logic between low light and motion detection</li>
+          <li><strong>Relay Module with Optocoupler:</strong> Allows the 3.3V control signal from the AND gate to switch the 12V needed for the high-wattage lamp</li>
+          <li><strong>Resistors:</strong> Various values for current limiting and voltage division</li>
+          <li><strong>Red LED:</strong> This is a personal favorite. Great for troubleshooting the circuit.</li>
+        </ul>
+
+        <h2>Circuit Design and Implementation</h2>
+        <p>
+          1. I set up the circuit to test the TI LM358P in a comparator setting where I will power a simple LED.<br>
+          <img src="test1.png" alt="Circuit 1" class="steps-image"><br>
+          Then I implemented the circuit in real life as shown below.<br>
+          <img src="test2.gif" alt="Testing the initial circuit" class="steps-image rotated-image">
+
+          Now that we have adjusted the values (potentiometer sensitivity and LDR resistance), we can move on to the next step.<br><br>
+
+          2. Now it is time to integrate the PIR sensor.<br>
+          For our circuit to output high we want it to meet the following condition: <i>(Light Comparator Circuit HIGH) AND (Motion is HIGH)</i> <br>
+          To implement this logic, I decided to create an AND gate using 2 NPN Transistors <br>
+          <img src="test2.png" alt="Circuit 2" class="steps-image"><br>
+
+          3. Now that the logic works out, I took out the LED and wired the output to a relay. This relay takes in a 3 or 3.3V input and can output a 12V output through an optocoupler and relay.<br>
+          <img src="final.gif" alt="Circuit 3" class="steps-image"><br>
+
+          4. Finally, I connected the relay to a high-wattage lamp and tested the circuit.<br>
+        </p>
+
+        <br>
+        <h2>Prototyping and Testing</h2>
+        <p>
+          After simulating the circuit, I soldered the components. To house the project, I designed and 3D-printed a compact enclosure. This step was crucial for creating a presentable and functional prototype.
+        </p>
+
+        <br>
+        <h2>Conclusion</h2>
+        <p>
+          This project demonstrates the practical application of op-amp comparators in creating smart, energy-efficient lighting solutions. By integrating light sensing, motion detection, transistors, and relay control, we've created a system that automatically manages lighting based on environmental conditions.<br>
+          <br>I am currently working on creating a PCB for this project, and possibly adding a timing feature to the lamp control. Stay tuned for updates!
+        </p>
+
+        <div class="skills">
+          <a href="../index.html#contact" class="skill">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Me</span>
+          </a>
+          <a href="../index.html#home" class="skill">
+            <i class="fas fa-home"></i>
+            <span>Return Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../script.js"></script>
+  <script src="../scroll_progress/scroll_progress.js"></script>
+</body>
+</html>
