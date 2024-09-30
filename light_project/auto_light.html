@@ -134,7 +134,7 @@
         <p>
           Before starting this project, it's essential to understand the core component used: the op-amp comparator.
         </p>
-        <img src="comparator.png" alt="How an op-amp comparator works diagram" class="steps-image" loading="lazy">
+        <img src="comparator.png" alt="How an op-amp comparator works diagram" class="steps-image">
         <p>
           <br>For this project, I used Texas Instruments' LM358P op-amp. This particular comparator operates on a single 5V power supply, which makes it easier to work with. In its "True" state, it outputs 5V, and in a "False" state, it outputs 0V.
         </p>
@@ -160,7 +160,7 @@
         <h2>Circuit Design and Implementation</h2>
         <p>
           1. I set up the circuit to test the TI LM358P in a comparator setting where I powered a simple LED.<br>
-          <img src="test1.png" alt="Initial circuit testing with LED" class="steps-image" loading="lazy"><br>
+          <img src="test1.png" alt="Initial circuit testing with LED" class="steps-image"><br>
           After testing, I implemented the circuit in real life, as shown below.<br>
           <img src="test2.gif" alt="Testing the initial circuit in real life" class="steps-image rotated-image">
           
@@ -168,12 +168,12 @@
 
         <p>
           2. Next, I integrated the PIR sensor. To meet the condition of <i>(Light Comparator Circuit HIGH) AND (Motion HIGH)</i>, I created an AND gate using 2 NPN transistors.<br>
-          <img src="test2.png" alt="Circuit with PIR sensor and AND gate logic" class="steps-image" loading="lazy">
+          <img src="test2.png" alt="Circuit with PIR sensor and AND gate logic" class="steps-image">
         </p>
 
         <p>
           <br>3. Once the logic was working, I wired the output to a relay. The relay takes in a 3.3V input and outputs a 12V signal through an optocoupler and relay to control a high-wattage lamp.<br>
-          <img src="final.gif" alt="Final circuit with relay and lamp control" class="steps-image" loading="lazy">
+          <img src="final.gif" alt="Final circuit with relay and lamp control" class="steps-image">
         </p>
 
         <br>
