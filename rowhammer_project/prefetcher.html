@@ -141,14 +141,14 @@
 
   <!-- Project Section -->
 <div id="home" class="banner">
-  <h1 class="top-page-title">Prefetcher Simulations for Row Hammer Attacks</h1>
+  <h1 class="top-page-title">Prefetcher Simulation for Row Hammer Attacks</h1>
 </div> 
 
 <section class="projects-section">
   <div class="project-container">
     <div class="project-description">
-      This project focuses on implementing prefetchers as described in research papers, we then showcase how our designs improve CPU's efficiency while analyzing security vulnerabiliteis. <br>
-      <br>The project was a collaborative effort by me, Karam Haddad, and my teammates Nathaniel Bush, Garvit Dhingra, and John Iler as part of Texas A&M University's 2024 Electrical Engineering Capstone. With the support of our sponsor and professors, our team secured third place for the Electrical Engineering Capstone with 86 teams competing overall! <br>
+      Implemented and programmed four prefetchers as a team of four from research papers in C++ for Texas A&M University's 2024 Electrical Engineering Capstone. <br>
+      <br>My prefetcher that I implemented, Timing-SKID (T-SKID)[6], achieved up to <strong>91% accuracy</strong>, reduced Row Hammer vulnerability by up to <strong>90%</strong>, and up to <strong>55% Instruction Per Cycle (IPC) improvement</strong>.
       <img src="award.png" alt="Team winning an award at the Texas A&M Capstone" class="steps-image"> <br>
       <h2>Background</h2>
       <ul>
@@ -196,12 +196,13 @@
       <p><img src="4.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 4:</strong> T-SKID Issuing a prefetch (a), and learning timing (b) [6]</span></p>
       <br>
-      <h3>Results</h3>
+      <h3>T-SKID Individual Results</h3>
       <p>
+        When running traces from the T-SKID research paper [6], the following results were observed:
         <ul>
           <li><strong>Comparison to Research Paper:</strong> Results varied. This was due to differences in software versions. However, the general improvement pattern over the baseline was followed.</li>
-          <li><strong>Instruction per Cycle (IPC) Speedup:</strong> Significant improvement in patterned traces. Randomized traces like MCF showed limited gains, as expected.</li>
-          <li><strong>Accuracy:</strong> High accuracy in workloads with discernible patterns.</li>
+          <li><strong>IPC Speedup:</strong> Significant improvement in patterned traces. Randomized traces like MCF showed limited gains, as expected. Up to about 22% improvement.</li>
+          <li><strong>Accuracy:</strong> High accuracy in workloads with discernible patterns. Up to 91% accurate.</li>
           <li><strong>Hammer Rate:</strong> Managed row activations effectively, aligning with expected behavior. Graph is in Figure 9.</li>
         </ul>
       </p>
@@ -217,8 +218,8 @@
         Beyond T-SKID, the team implemented and validated additional prefetchers:
         <ul>
           <li><strong>LSTM-based Prefetcher (Nathaniel Bush):</strong> A neural network to predict memory access offsets.</li>
-          <li><strong>Tag Correlating Prefetcher (John Iler):</strong> Utilized tag sequences to predict cache accesses.</li>
-          <li><strong>Temporal Prefetcher (Garvit Dhingra):</strong> A structure-based temporal approach using custom caches.</li>
+          <li><strong>Tag Correlating Prefetcher (TCP) (John Iler):</strong> Utilized tag sequences to predict cache accesses.</li>
+          <li><strong>Managed Irregular Stream Buffer (MISB) (Garvit Dhingra):</strong> A structure-based temporal approach using custom caches.</li>
         </ul>
       </p>
 
