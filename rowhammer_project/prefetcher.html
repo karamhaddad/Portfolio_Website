@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prefetcher Simulation for Rowhammer - Karam Haddad</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../seprate-exp.css">
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css">
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    .banner {
+      margin: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      width: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.507), rgb(16, 16, 16)),
+      url(../ai_banner.webp);
+      background-size: cover;
+      background-position: center;
+
+      color:#d8d5db;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+    }
+    ul {
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .steps-image {
+      max-width: 500px;
+      height: auto;
+      object-fit: contain; /* Ensure the image fits within the dimensions */
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .figure-text{
+      display: block;
+      text-align: center;
+    }
+    .project-description {
+      max-width: 800px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .skill {
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+    .skill:hover {
+      background-color: #ddd;
+    }
+    @media (max-width: 768px) {
+      .steps-image {
+        width: 300px;
+      }
+      .top-page-title {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      iframe {
+        width: 115%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <!-- Hamburger Menu Icon for Mobile -->
+    <div class="hamburger-icon">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <!-- Menu Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <!-- Desktop nav menu -->
+    <ul class="desktop-menu">
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li>Home</li></a>
+      <a href="../index.html#experience"><li>Experience</li></a>
+      <a href="../index.html#projects"><li>Projects</li></a>
+      <a href="../index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <!-- Project Section -->
+<div id="home" class="banner">
+  <h1 class="top-page-title">Prefetcher Simulations for Row Hammer Attacks</h1>
+</div> 
+
+<section class="projects-section">
+  <div class="project-container">
+    <div class="project-description">
+      <h2>Prefetching</h2>
+      <p>
+        Prefetching is a technique that loads data into the cache <strong>before it’s needed</strong>. By predicting future data requirements, prefetching improves program execution speed.
+        <img src="1.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 1:</strong> Prefetchers explained [1]</span>
+      </p>
+
+      <h2>Row Hammer</h2>
+      <p>
+        Row Hammer is a DRAM vulnerability where frequent access to a memory row causes <strong>bit flips</strong> in adjacent rows. This issue is worsened by prefetchers, as repeated access to specific rows increases the risk of data corruption.
+        <img src="2.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 2:</strong> Cache layout [2]</span>
+      </p>
+
+      <h2>Traces</h2>
+      <p>
+        A trace is a <strong>collection of data access patterns</strong>. Different prefetchers exploit different patterns, which may range from completely random to highly predictable.
+        <img src="3.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 3:</strong> Texas A&M Trace Speedup Survey [3]</span>
+      </p>
+
+      <h2>T-SKID: Timing-SKID Prefetcher</h2>
+      <p>
+        The <strong>T-SKID</strong> prefetcher, which I implemented, is designed to delay prefetching until the optimal moment. This strategic delay prevents unnecessary cache misses and improves cache efficiency.
+      </p>
+
+      <h3>Design</h3>
+      <ul>
+        <li>Implemented core data structures:</li>
+        <ul>
+          <li><strong>Target Table (TT)</strong></li>
+          <li><strong>Address Prediction Table (APT)</strong></li>
+          <li><strong>Inflight Prefetch Table (IPT)</strong></li>
+          <li><strong>Recent Request Program Counter Queue (RRPCQ)</strong></li>
+        </ul>
+        <li>Followed the research paper’s methodology for learning addresses, timing, and issuing prefetches.</li>
+      </ul>
+      <p><img src="4.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 4:</strong> T-SKID Issuing a prefetch (a), and learning timing (b) [6]</span></p>
+
+      <h3>Results</h3>
+      <p>
+        <ul>
+          <li><strong>IPC Speedup:</strong> Significant improvement in patterned traces.</li>
+          <li>Randomized traces like MCF showed limited gains, as expected.</li>
+          <li><strong>Accuracy:</strong> High accuracy in workloads with discernible patterns.</li>
+          <li><strong>Hammer Rate:</strong> Managed row activations effectively, aligning with expected behavior from the research.</li>
+        </ul>
+      </p>
+      <p><img src="5.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 5:</strong> IPC Speedup in single-core configuration</span>
+      
+        <img src="6.png" alt="Audio Clustering" class="steps-image">
+        <span class="figure-text"><br><strong>Figure 6:</strong> T-SKID Accuracy</span></p>
+
+      <h2>Team Contributions</h2>
+      <p>
+        Beyond T-SKID, the team implemented and validated additional prefetchers:
+        <ul>
+          <li><strong>LSTM-based Prefetcher (Nathaniel Bush):</strong> A neural network to predict memory access offsets.</li>
+          <li><strong>Tag Correlating Prefetcher (John Iler):</strong> Utilized tag sequences to predict cache accesses.</li>
+          <li><strong>Temporal Prefetcher (Garvit Dhingra):</strong> A structure-based temporal approach using custom caches.</li>
+        </ul>
+      </p>
+
+      <h2>Integrated Results</h2>
+      <p>
+        The team combined results to analyze:
+        <ul>
+          <li><strong>Speedup:</strong> Achieved measurable IPC improvements over benchmarks.</li>
+          <li><strong>Accuracy:</strong> Evaluated useful vs. useless prefetches.</li>
+          <li><strong>Hammer Rate:</strong> Compared row activations to a baseline (no prefetching).</li>
+        </ul>
+        <p><img src="7.png" alt="Audio Clustering" class="steps-image">
+          <span class="figure-text"><br><strong>Figure 7:</strong> Integrated Results for IPC Speed Up</span>
+        
+          <img src="8.png" alt="Audio Clustering" class="steps-image">
+          <span class="figure-text"><br><strong>Figure 8:</strong> Integrated Results for Accuracy</span></p>
+
+          <img src="9.png" alt="Audio Clustering" class="steps-image">
+          <span class="figure-text"><br><strong>Figure 9:</strong> Integrated Results for Hammer Rate</span></p>
+      </p>
+
+      <br>
+      <h2>Conclusion</h2>
+      <p>
+        My prefetcher was able to get the highest IPC and the lowest hammer rate when compared to other prefetchers within the project.
+        <br><br>Furthermore, we were able to: <br>
+        1. Improved sponsor’s Row Hammer survey.<br>
+        2. Successfully validated prefetcher implementations with research papers.<br>
+        3. Achieved performance speedups and analyzed row activation trends.<br>
+        4. Developed prefetchers that provide a foundation for further research.
+      </p>
+
+      <br><h3>References</h3>
+      <p>
+        <ul>
+          <li>
+            <a href="https://drive.google.com/file/d/1MLUmzoTmQRZIvkyL8EaKVQsl0Boqc1gG/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style="color: white;">
+              References linked here
+            </a>
+          </li>
+        </ul>
+      </p>
+
+
+      <div class="skills">
+        <a href="https://github.com/karamhaddad/Multimodal-Digit-Recognition.git" target="_blank" rel="noopener noreferrer" class="skill">
+          <i class="fab fa-github"></i>
+          <span>Project's Github</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script src="../script.js"></script> <!-- Link to the nav -->
+  <script src="../scroll_progress/scroll_progress.js"></script> <!-- Link to the scroll progress JS file -->
+</body>
+</html>
