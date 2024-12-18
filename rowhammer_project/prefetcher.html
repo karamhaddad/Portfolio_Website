@@ -147,16 +147,25 @@
 <section class="projects-section">
   <div class="project-container">
     <div class="project-description">
+      This project focuses on implementing prefetchers as described in research papers, we then showcase how our designs improve CPU's efficiency while analyzing security vulnerabiliteis. <br>
+      <br>The project was a collaborative effort by me, Karam Haddad, and my teammates Nathaniel Bush, Garvit Dhingra, and John Iler as part of Texas A&M University's 2024 Electrical Engineering Capstone. With the support of our sponsor and professors, our team secured third place for the Electrical Engineering Capstone with 86 teams competing overall! <br>
+      <img src="award.png" alt="Team winning an award at the Texas A&M Capstone" class="steps-image"> <br>
+      <h2>Background</h2>
+      <ul>
+        <li>The goal of this project is to enhance Texas A&M's survey by adding more devices to the list</li>
+        <li>Collect and compare data to research papers to validate our implementations</li>
+      </ul>
+      
       <h2>Prefetching</h2>
       <p>
         Prefetching is a technique that loads data into the cache <strong>before it’s needed</strong>. By predicting future data requirements, prefetching improves program execution speed.
         <img src="1.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 1:</strong> Prefetchers explained [1]</span>
-      </p>
+      </p><br>
 
       <h2>Row Hammer</h2>
       <p>
-        Row Hammer is a DRAM vulnerability where frequent access to a memory row causes <strong>bit flips</strong> in adjacent rows. This issue is worsened by prefetchers, as repeated access to specific rows increases the risk of data corruption.
+        Row Hammer is a memory vulnerability where frequent access to a memory row causes <strong>bit flips</strong> in adjacent rows. This issue is worsened by prefetchers, as repeated access to specific rows increases the risk of data corruption.
         <img src="2.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 2:</strong> Cache layout [2]</span>
       </p>
@@ -167,12 +176,12 @@
         <img src="3.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 3:</strong> Texas A&M Trace Speedup Survey [3]</span>
       </p>
-
+      <br>
       <h2>T-SKID: Timing-SKID Prefetcher</h2>
       <p>
         The <strong>T-SKID</strong> prefetcher, which I implemented, is designed to delay prefetching until the optimal moment. This strategic delay prevents unnecessary cache misses and improves cache efficiency.
       </p>
-
+      <br>
       <h3>Design</h3>
       <ul>
         <li>Implemented core data structures:</li>
@@ -186,14 +195,14 @@
       </ul>
       <p><img src="4.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 4:</strong> T-SKID Issuing a prefetch (a), and learning timing (b) [6]</span></p>
-
+      <br>
       <h3>Results</h3>
       <p>
         <ul>
-          <li><strong>IPC Speedup:</strong> Significant improvement in patterned traces.</li>
-          <li>Randomized traces like MCF showed limited gains, as expected.</li>
+          <li><strong>Comparison to Research Paper:</strong> Results varied. This was due to differences in software versions. However, the general improvement pattern over the baseline was followed.</li>
+          <li><strong>Instruction per Cycle (IPC) Speedup:</strong> Significant improvement in patterned traces. Randomized traces like MCF showed limited gains, as expected.</li>
           <li><strong>Accuracy:</strong> High accuracy in workloads with discernible patterns.</li>
-          <li><strong>Hammer Rate:</strong> Managed row activations effectively, aligning with expected behavior from the research.</li>
+          <li><strong>Hammer Rate:</strong> Managed row activations effectively, aligning with expected behavior. Graph is in Figure 9.</li>
         </ul>
       </p>
       <p><img src="5.png" alt="Audio Clustering" class="steps-image">
@@ -202,6 +211,7 @@
         <img src="6.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 6:</strong> T-SKID Accuracy</span></p>
 
+      <br>
       <h2>Team Contributions</h2>
       <p>
         Beyond T-SKID, the team implemented and validated additional prefetchers:
@@ -216,9 +226,9 @@
       <p>
         The team combined results to analyze:
         <ul>
-          <li><strong>Speedup:</strong> Achieved measurable IPC improvements over benchmarks.</li>
-          <li><strong>Accuracy:</strong> Evaluated useful vs. useless prefetches.</li>
-          <li><strong>Hammer Rate:</strong> Compared row activations to a baseline (no prefetching).</li>
+          <li><strong>Speedup:</strong> Achieved measurable IPC improvements over benchmarks. The goal is to get a higher IPC than the baseline. </li>
+          <li><strong>Accuracy:</strong> Evaluated useful vs. useless prefetches. This shows how agressive a prefetcher was.</li>
+          <li><strong>Hammer Rate:</strong> Compared row activations to a baseline (no prefetching). The goal is to keep this number as low as possible.</li>
         </ul>
         <p><img src="7.png" alt="Audio Clustering" class="steps-image">
           <span class="figure-text"><br><strong>Figure 7:</strong> Integrated Results for IPC Speed Up</span>
@@ -233,12 +243,12 @@
       <br>
       <h2>Conclusion</h2>
       <p>
-        My prefetcher was able to get the highest IPC and the lowest hammer rate when compared to other prefetchers within the project.
-        <br><br>Furthermore, we were able to: <br>
+        My prefetcher was able to get the highest IPC and the lowest hammer rate when compared to other prefetchers, while still retaining strong accuracy.
+        <br><br>Furthermore, we were able to achieve our original goals: <br>
         1. Improved sponsor’s Row Hammer survey.<br>
         2. Successfully validated prefetcher implementations with research papers.<br>
         3. Achieved performance speedups and analyzed row activation trends.<br>
-        4. Developed prefetchers that provide a foundation for further research.
+        4. Developed prefetchers that provide a foundation for further research. <br>
       </p>
 
       <br><h3>References</h3>
@@ -257,9 +267,13 @@
 
 
       <div class="skills">
-        <a href="https://github.com/karamhaddad/Multimodal-Digit-Recognition.git" target="_blank" rel="noopener noreferrer" class="skill">
-          <i class="fab fa-github"></i>
-          <span>Project's Github</span>
+        <a href="../index.html#contact" class="skill">
+          <i class="fas fa-envelope"></i>
+          <span>Contact Me</span>
+        </a>
+        <a href="../index.html#projects" class="skill">
+          <i class="fas fa-home"></i>
+          <span>Return Home</span>
         </a>
       </div>
     </div>
