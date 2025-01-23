@@ -138,6 +138,7 @@ object-fit: contain; /*this line is used to make the image fit the container*/
   overflow: hidden;
   opacity: 0.5;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .experience-description {
